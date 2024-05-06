@@ -1,27 +1,46 @@
-# SchoolEdacy
+# Gestion Scolaire - Application Angular
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.0.0.
+Ce projet consiste en une application de gestion scolaire développée en Angular. L'application permet à l'administration de l'école d'ajouter, de modifier, de supprimer et de visualiser les informations concernant les classes et les élèves.
 
-## Development server
+## Fonctionnalités
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+1. **Gestion des Classes**
+   - Ajouter une classe avec son nom.
+   - Modifier le nom d'une classe existante.
+   - Supprimer une classe.
 
-## Code scaffolding
+2. **Gestion des Élèves**
+   - Ajouter un élève avec son nom et prénom.
+   - Placer un élève dans une classe spécifique.
+   - Modifier les informations d'un élève.
+   - Supprimer un élève.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+3. **Liste des Classes et Élèves**
+   - Afficher la liste de toutes les classes avec leurs élèves respectifs.
+   - Afficher la liste de tous les élèves avec leur classe respective.
 
-## Build
+## Technologies Utilisées
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+- Angular
+- TypeScript
+- HTML - CSS
 
-## Running unit tests
+## Installation
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+1. Clonez le projet depuis GitHub : `git clone https://github.com/diamanka-sn/school_project_edacy.git`
+2. Accédez au répertoire du projet : `cd school_project_edacy`
+3. Installez les dépendances : `npm install`
+4. Lancez l'application : `ng serve`
 
-## Running end-to-end tests
+## Auteur
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+Ce projet a été développé par diamanka-sn dans le cadre de la formation Full-stack development et soft skills avec EDACY.
 
-## Further help
+## Contributions
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+Les contributions sont les bienvenues! N'hésitez pas à ouvrir une issue ou à proposer une pull request.
+
+
+## Démo
+
+Une démo de l'application n'est pas encore disponible

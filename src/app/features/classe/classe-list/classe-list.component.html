@@ -15,6 +15,7 @@
   <li *ngFor="let classe of classes$ | async">
     {{ classe.classe.nom }} - {{classe.nombreEtudiants}} élèves
     <button (click)="editClasse(classe.classe)">Modifier</button>
+    <button [routerLink]="['/classe', classe.classe.id]">Détails</button>
     <button (click)="supprimerClasse(classe.classe)">Supprimer</button>
   </li>
 </ul>

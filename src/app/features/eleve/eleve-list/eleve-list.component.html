@@ -15,16 +15,15 @@
 
     <button type="submit" [disabled]="eleveForm.invalid">{{ isEditMode ? 'Modifier' : 'Ajouter' }}</button>
 </form>
-
-<h3>Liste des élèves</h3>
-
 <h2>Liste des élèves</h2>
 
 <ul>
-  <li *ngFor="let etudiant of etudiants$ | async">
-    {{ etudiant.etudiant.nom }}
-    <span>(Classe {{ etudiant.classe?.nom }})</span>
-    <button (click)="editEtudiant(etudiant.etudiant)">Modifier</button>
-    <button (click)="supprimerEtudiant(etudiant.etudiant.id)">Supprimer</button>
-  </li>
+    <li *ngFor="let etudiant of etudiants$ | async">
+        {{ etudiant.etudiant.nom }}
+        <span>(Classe {{ etudiant.classe?.nom }})</span>
+        <button (click)="editEtudiant(etudiant.etudiant)">Modifier</button>
+        <button [routerLink]="['/eleve', etudiant.etudiant.id]">Détails</button>
+        <button (click)="supprimerEtudiant(etudiant.etudiant.id)">Supprimer</button>
+    </li>
 </ul>
+

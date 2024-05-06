@@ -44,3 +44,4 @@ Les contributions sont les bienvenues! N'hésitez pas à ouvrir une issue ou à 
 ## Démo
 
 Une démo de l'application n'est pas encore disponible
+

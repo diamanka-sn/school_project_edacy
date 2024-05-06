@@ -1,0 +1,30 @@
+<h2>Gestion des élèves</h2>
+
+<form [formGroup]="eleveForm" (ngSubmit)="onSubmit()">
+    <div>
+        <label for="nom">{{ isEditMode ? 'Modifier le nom de l\'élève' : 'Ajouter un nouvel élève' }} :</label>
+        <input type="text" id="nom" formControlName="nom" required>
+    </div>
+
+    <div>
+        <label for="classe">Classe :</label>
+        <select id="classe" formControlName="classeId">
+            <option *ngFor="let classe of classes$ | async" [value]="classe.id">{{ classe.nom }}</option>
+        </select>
+    </div>
+
+    <button type="submit" [disabled]="eleveForm.invalid">{{ isEditMode ? 'Modifier' : 'Ajouter' }}</button>
+</form>
+
+<h3>Liste des élèves</h3>
+
+<h2>Liste des élèves</h2>
+
+<ul>
+  <li *ngFor="let etudiant of etudiants$ | async">
+    {{ etudiant.etudiant.nom }}
+    <span>(Classe {{ etudiant.classe?.nom }})</span>
+    <button (click)="editEtudiant(etudiant.etudiant)">Modifier</button>
+    <button (click)="supprimerEtudiant(etudiant.etudiant.id)">Supprimer</button>
+  </li>
+</ul>

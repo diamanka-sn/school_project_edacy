@@ -1,0 +1,8 @@
+<h2 *ngIf="classe">Détails de la classe {{ classe.nom }}</h2>
+
+<div *ngIf="classe">
+  <h3>Élèves dans cette classe</h3>
+  <ul>
+    <li *ngFor="let etudiant of etudiants$ | async">{{etudiant.nom }}</li>
+  </ul>
+</div>

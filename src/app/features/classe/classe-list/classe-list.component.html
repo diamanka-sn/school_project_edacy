@@ -1,0 +1,20 @@
+<h2>Gestion des classes</h2>
+
+<form [formGroup]="classForm" (ngSubmit)="onSubmit()">
+  <div>
+    <label for="nom">{{ isEditMode ? 'Modifier le nom de la classe' : 'Ajouter une nouvelle classe' }} :</label>
+    <input type="text" id="nom" formControlName="nom" required>
+  </div>
+
+  <button type="submit" [disabled]="classForm.invalid">{{ isEditMode ? 'Modifier' : 'Ajouter' }}</button>
+</form>
+
+<h3>Liste des classes</h3>
+
+<ul>
+  <li *ngFor="let classe of classes$ | async">
+    {{ classe.classe.nom }} - {{classe.nombreEtudiants}} élèves
+    <button (click)="editClasse(classe.classe)">Modifier</button>
+    <button (click)="supprimerClasse(classe.classe)">Supprimer</button>
+  </li>
+</ul>

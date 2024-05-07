@@ -25,9 +25,9 @@ export class EleveListComponent {
       this.dataService.classes$
     ]).pipe(
       map(([etudiants, classes]) =>
-        etudiants.map((etudiant:Etudiant) => ({
+        etudiants.map((etudiant:any) => ({
           etudiant,
-          classe: classes.find((c:Classe) => c.id === etudiant.classeId)
+          classe: classes.find((c:Classe) => c.id === parseInt(etudiant.classeId))
         }))
       )
     );
